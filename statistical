@@ -1,1 +1,21 @@
-**Data read**
+# Data read
+detach()
+dados <- read.table("geral.txt",h=T)
+names(dados)
+
+attach(dados)
+UE <- 10*Semana+Repeticao
+Tempo <- factor(Semana)
+Aquario <- factor(Repeticao)
+t <- Semana-.5
+t2 <- t^2
+t3 <- t^3
+t4 <- t^4
+levels(Tratamento)
+
+artemia <- c(1,-1,0)
+mistura <- c(-.5,-.5,1)
+M <- cbind(artemia,mistura)
+#contrasts(Tratamento,2) <- M
+#save(Tratamento,file="Tratamento.rda")
+load("Tratamento.rda")
