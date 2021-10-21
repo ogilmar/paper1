@@ -28,3 +28,12 @@ bc <- boxcox(Velocidade ~ Tratamento*Tempo+UE)
 
 Vt <- (Velocidade^lambda-1)/lambda
 
+interaction.plot(Tempo,Tratamento,Vt)
+
+library(lme4)
+m.0 <- lmer(Vt ~ Tratamento*Semana+(1|UE))
+anova(m.0)
+
+summary(m.0)
+
+
