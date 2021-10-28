@@ -20,7 +20,7 @@ M <- cbind(artemia,mistura)
 #save(Tratamento,file="Tratamento.rda")
 load("Tratamento.rda")
 
-#Checking the normality for liner models
+#Checking the normality for linear models
 
 library(MASS)
 bc <- boxcox(Velocidade ~ Tratamento*Tempo+UE)
